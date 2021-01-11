@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowButton } from './style';
 
-export default function ArrowBase({ type }) {
+export default function ArrowBase({ type, onClick, children, disabled }) {
+
   return (
     <>
-      <ArrowButton>{type}</ArrowButton>
+      <ArrowButton onClick={onClick} value={type} disabled={disabled}>{children}</ArrowButton>
     </>
   );
+
 }
